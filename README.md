@@ -3,15 +3,15 @@
 
 ## Introduction
 
-We have talked about different data types, how to use them, and the kinds of operations that we can perform on them. Infact, we talked about using Booleans (`True` or `False`) to inform decisions in our programming. We'll do create a type of decision in our code, we use conditionals. Conditionals allow us to break up our code in a way that we can selectively perform operations like assigning a value or even just printing text.
+We have talked about different data types, how to use them, and the kinds of operations that we can perform on them. We have also talked about using Booleans (`True` or `False`) to inform decisions in our programming. Often when we want to implement a decision in our code, we'll use conditionals. Conditionals allow us to break up our code in a way that we can selectively perform operations like assigning a value or even just printing text.
 
 ## Objectives
-
+You will be able to:
 * Understand and use conditionals
 
 ## If Statement and Execution Flow
 
-In Python there are three conditional statements, `if`, `elif`, and `else`. Every conditional statement begins with an `if`, however, `elif` and `else` are not always required. 
+In Python there are three conditional statements, `if`, `elif`, and `else`. Every conditional statement is required to begin with an `if`. `elif` and `else` are not always required. 
 
 So far in Python, all of our lines of code run one after the other. So in the code below, `vacation_days` is initially assigned to `0`, then it is reassigned by incrementing by one, and again reassigned by incrementing again by one, which brings the `vacation_days` to a total of `2`.
 
