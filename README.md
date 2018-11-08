@@ -8,25 +8,51 @@ We have talked about different data types, how to use them, and the kinds of ope
 ## Objectives
 You will be able to:
 * Understand and use conditionals
+* Write an If statement
 
-## If Statement and Execution Flow
+## Execution Flow
 
-In Python there are three conditional statements, `if`, `elif`, and `else`. Every conditional statement is required to begin with an `if`. `elif` and `else` are not always required. 
-
-So far in Python, all of our lines of code run one after the other. So in the code below, `vacation_days` is initially assigned to `0`, then it is reassigned by incrementing by one, and again reassigned by incrementing again by one, which brings the `vacation_days` to a total of `2`.
+ So far in Python, all of our lines of code run one after the other. So in the code below, `vacation_days` is initially assigned to `0`, then it is reassigned by incrementing by one, and again reassigned by incrementing again by one, which brings the `vacation_days` to a total of `2`.
 
 
 ```python
+# set-up vacation_days variable
 vacation_days = 0
-vacation_days += 1
-vacation_days += 1
+
+# add 1 to vacation_days and rewrite itself
+vacation_days = vacation_days + 1
+vacation_days = vacation_days + 1
+
+# print how many vacation days there are
 print(vacation_days)
 ```
+
+    2
+
+
+
+```python
+# reset variable to 0
+vacation_days = 0
+
+# this does the same as above
+vacation_days += 1
+vacation_days += 1
+
+# print how many vacation days there are
+print(vacation_days)
+```
+
+    2
+
 
 > The `+=` is used to add the current value and a new value and assign the resulting value. The statement `vacation_days += 1` can be thought of as `vacation_days = vacation_days + 1`. 
 On line 1 we assign `vacation_days` the value `0`. So, on line two, we reassign `vacation_days` to equal the current value of `vacation_days`, which is `0`, plus `1`. Again we increment vacation_days on line 3, which would now equate to `1 + 1`, and finally we output the new value of `vacation_days`, `2`.
 
-Now what if we wanted to only increment our vacation days based on a condtion? We could imagine a condition in this context being whether or not we hit our goals this quarter at work or something. If that condition were `True` we would want to increase our vacation days. However, if that condition is not `True` we can't increase our vacation time. Let's look at the code below that contains an `if` statement. 
+## If Statement
+In Python there are three conditional statements, `if`, `elif`, and `else`. Every conditional statement is required to begin with an `if`. `elif` and `else` are not always required. `elif` is short for **else if**.
+
+Now what if we wanted to only increment our vacation days based on a condtion? We could imagine a condition in this context being whether or not we hit our goals this quarter at work. If that condition were `True` we would want to increase our vacation days. However, if that condition is not `True` we can't increase our vacation time. Let's look at the code below that contains an `if` statement. 
 
 Code that is part of an `if` statement *block* runs only when the condition evaluates to `True`. So if the condition evaluates to `False` our block of code will not be run and it moves on to the next block. 
 
@@ -35,16 +61,22 @@ Code that is part of an `if` statement *block* runs only when the condition eval
 
 ```python
 vacation_days = 1
-if False:
-    # if block starts
-    # code does not run since conditional argument is False
+if True:
+    # all code indented under the if statement is the block
+    # indented code runs since conditional argument is True
     vacation_days += 1
     print("vacation_days = ", vacation_days)
     print("we incremented vacation days")
 # if block ends
 ```
 
-Okay, so we didn't see any output because our condition was `False`, so, our block of code was skipped. What if we want to make sure there is *some* code run even if the first condition turns out to be `False`? That is where we can use our `else` statement.
+    vacation_days =  2
+    we incremented vacation days
+
+
+Because our condition was `True`, our block of code ran. We added 1 day to our `vacation_days` variable and printed two statements. 
+
+What if the first conditional was set to `False` but we wanted to make sure there is *some* code that runs no matter what? That is where we can use our `else` statement.
 
 
 ```python
@@ -63,9 +95,9 @@ else:
 # else block ends
 ```
 
-Above we can see that since the condition following the `if` equals `False`, the code directly underneath is not run.  So, `vacation_days` stays assigned to the number 1. However, since we now have an `else` statement, our `if` block gets skippeed and we then move on to the block of code underneath our `else` statement, which we can see prints the number of vacation days and a message indicating that we did not increment the vacation days.
+Above we can see that the condition following the `if` is `False` and the code directly underneath is not run. The variable `vacation_days` stays assigned to the number 1. However, since we now have an `else` statement, our `if` block gets skipped and we then move on to the block of code underneath our `else` statement, which we can see prints the number of vacation days and a message indicating that we did not increment the vacation days.
 
-Now what if we have a second condition? Let's say we really worked hard and exceeded all our goals for the quarter? Maybe instead of incrementing just `1` day, we increment our vacation days by `2`! The third conditional statement is an `elif` statement, which is essentially another `if` statement that follows the first `if` statement. `elif` still requires a condition and a block of code, but it only comes after an `if` statement or another `elif` statement. 
+But what if we have a second condition? Let's say we really worked hard and exceeded all our goals for the quarter? Maybe instead of incrementing just `1` day, we increment our vacation days by `2`! The third conditional statement is an `elif` statement, which is essentially another `if` statement that follows the first `if` statement. `elif` still requires a condition and a block of code, but it only comes after an `if` statement or another `elif` statement. 
 
 Let's take a look:
 
@@ -105,6 +137,13 @@ if vacation_days:
 vacation_days
 ```
 
+
+
+
+    2
+
+
+
 Even through `vacation_days` did not evaluate to `True`, it still ran the code in the `if` block because the value for `vacation_days` was `1`, which is considered `truthy`.
 
 So, from this we can surmize that numbers are **truthy** values. EXCEPT, in Python `0` is **not** considered a truthy value.   
@@ -117,6 +156,13 @@ if vacation_days:
     vacation_days += 1
 vacation_days
 ```
+
+
+
+
+    0
+
+
 
 If `0` is **not truthy**, and it is not `True` or `False`, what is it? Just as Python has **truthy** values, it has **falsy** values (or values that are treated as False in conditional statements), and `0` is considered a falsy value. 
 
@@ -133,6 +179,13 @@ else:
     greeting += 'Goodbye'
 greeting
 ```
+
+
+
+
+    'Goodbye'
+
+
 
 If we are ever curious about the whether something is truthy or falsy in Python, we can just ask with the `bool` function.
 
@@ -184,6 +237,59 @@ bool([])
 
 
 
+Boolean values (`True` and `False`) can also be used in mathematical equations. `True` is set to 1 and `False` is set to 0.
+
+
+```python
+True + 5 + True
+```
+
+
+
+
+    7
+
+
+
+
+```python
+True - False - False + True
+```
+
+
+
+
+    2
+
+
+
+
+```python
+True * 4
+```
+
+
+
+
+    4
+
+
+
+We can see how this can be put to use in an If statement
+
+
+```python
+test_var = 1
+
+if test_var:
+    print('Truthy')
+else:
+    print('Falsey')
+```
+
+    Truthy
+
+
 ## Using Data to Make Decisions
 
 Our code in conditional arguments becomes more interesting when we use conditional arguments that are less direct than just `True` or `False`.
@@ -201,6 +307,9 @@ else:
     print("#average")
 ```
 
+    #disruptive
+
+
 Great, now what if we want to tag vacations that are under 3 days off as minimally disruptive? Well, we don't want to create a new if block entirely. If we do, then our else statement will always run and we'll get `#average` and `#minimal`, which is not what we want. 
 
 So, we'll have to use an `elif` statement.
@@ -216,6 +325,9 @@ else:
     print("#average")
 ```
 
+    #minimal
+
+
 
 ```python
 number_of_days = 3
@@ -226,6 +338,9 @@ elif number_of_days < 3:
 else:
     print("#average")
 ```
+
+    #average
+
 
 We can see how powerful this kind of code can be to creating dynamic and efficient programs and to makings decisions. Now, there is no need for anyone to manually rank each employee's vacations and we now have a system that flags vacations that might need some special planning by management in order to keep work running smoothly.
 
