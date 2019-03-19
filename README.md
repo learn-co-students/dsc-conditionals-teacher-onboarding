@@ -124,7 +124,7 @@ It is important to note that an `else` block comes last and will **always** run 
 
 ## Truthiness
 
-![truthiness](truthiness.png "Truthiness")
+![truthiness](images/truthiness.png)
 
 So far our conditionals have depended on whether something evaluates exactly to `True` or `False`.  But conditionals don't force us to be so precise. Conditionals also consider some values `True` if they are `truthy` and `False` if they are `falsy`.  Take a look at the following:
 
@@ -344,6 +344,6 @@ else:
 
 We can see how powerful this kind of code can be to creating dynamic and efficient programs and to makings decisions. Now, there is no need for anyone to manually rank each employee's vacations and we now have a system that flags vacations that might need some special planning by management in order to keep work running smoothly.
 
-### Summary
+## Summary
 
 In this lesson, we saw how conditionals allow us to make decisions with our code by only executing code under the `if` statement when the conditional argument is `True` or truthy.  We then saw how we can use the `else` statement to only run code when the conditional argument is `False` or falsy, and as we know, code that is not in a conditional block is still run as normal. Next We examined what is truthy or falsy, and saw that None, 0, empty strings and lists are all falsy. If we are unsure, we can use the `bool` function to see a the boolean value of a piece of data. Finally, we brought it all together and used `if`, `elif`, and `else` statements together to make decisions based on the conditions of our problem.
