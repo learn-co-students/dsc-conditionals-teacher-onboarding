@@ -144,9 +144,9 @@ vacation_days
 
 
 
-Even through `vacation_days` did not evaluate to `True`, it still ran the code in the `if` block because the value for `vacation_days` was `1`, which is considered `truthy`.
+Even though `vacation_days` did not evaluate to `True`, it still ran the code in the `if` block because the value for `vacation_days` was `1`, which is considered `truthy`.
 
-So, from this we can surmize that numbers are **truthy** values. EXCEPT, in Python `0` is **not** considered a truthy value.   
+So, from this we can surmise that numbers are **truthy** values. EXCEPT, in Python `0` is **not** considered a truthy value.   
 
 
 ```python
