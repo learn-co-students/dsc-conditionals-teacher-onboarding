@@ -46,7 +46,7 @@ print(vacation_days)
     2
 
 
-> The `+=` is used to add the current value and a new value and assign the resulting value. The statement `vacation_days += 1` can be thought of as `vacation_days = vacation_days + 1`. 
+> The `+=` is used to increment the current value of the variable and assign this new value back to it. The statement `vacation_days += 1` can be thought of as `vacation_days = vacation_days + 1`. 
 On line 1 we assign `vacation_days` the value `0`. So, on line two, we reassign `vacation_days` to equal the current value of `vacation_days`, which is `0`, plus `1`. Again we increment vacation_days on line 3, which would now equate to `1 + 1`, and finally we output the new value of `vacation_days`, `2`.
 
 ## If Statement
@@ -56,7 +56,7 @@ Now what if we wanted to only increment our vacation days based on a condtion? W
 
 Code that is part of an `if` statement *block* runs only when the condition evaluates to `True`. So if the condition evaluates to `False` our block of code will not be run and it moves on to the next block. 
 
-> **Note:** A *block* is any code that is grouped together. With conditionals, we indicate that something is part of the *block* by indenting. So the line `vacation_days += 1` is indented to ensure that it is run as a part of the conditional argument below. To end the block we simply stop indenting.
+> **Note:** A *block* is any code that is grouped together. With conditionals, we indicate that something is part of the *block* by *indentation*. So the line `vacation_days += 1` is indented to ensure that it is run as a part of the conditional argument below. To end the block we simply stop indenting.
 
 
 ```python
@@ -95,6 +95,10 @@ else:
 # else block ends
 ```
 
+    vacation_days =  1
+    we did NOT increment vacation days
+
+
 Above we can see that the condition following the `if` is `False` and the code directly underneath is not run. The variable `vacation_days` stays assigned to the number 1. However, since we now have an `else` statement, our `if` block gets skipped and we then move on to the block of code underneath our `else` statement, which we can see prints the number of vacation days and a message indicating that we did not increment the vacation days.
 
 But what if we have a second condition? Let's say we really worked hard and exceeded all our goals for the quarter? Maybe instead of incrementing just `1` day, we increment our vacation days by `2`! The third conditional statement is an `elif` statement, which is essentially another `if` statement that follows the first `if` statement. `elif` still requires a condition and a block of code, but it only comes after an `if` statement or another `elif` statement. 
@@ -120,7 +124,13 @@ else:
     print("we did NOT increment vacation days")
 ```
 
-It is important to note that an `else` block comes last and will **always** run if the conditions before it are false.
+    We are now in our elif statement!
+    This means that we exceeded our goals this quarter
+    We will increase our vacation days by two
+    vacation_days =  3
+
+
+It is important to note that an `else` block comes last and will **only** run if all the conditions before it are false.
 
 ## Truthiness
 
@@ -346,4 +356,4 @@ We can see how powerful this kind of code can be to creating dynamic and efficie
 
 ## Summary
 
-In this lesson, we saw how conditionals allow us to make decisions with our code by only executing code under the `if` statement when the conditional argument is `True` or truthy.  We then saw how we can use the `else` statement to only run code when the conditional argument is `False` or falsy, and as we know, code that is not in a conditional block is still run as normal. Next We examined what is truthy or falsy, and saw that None, 0, empty strings and lists are all falsy. If we are unsure, we can use the `bool` function to see a the boolean value of a piece of data. Finally, we brought it all together and used `if`, `elif`, and `else` statements together to make decisions based on the conditions of our problem.
+In this lesson, we saw how conditionals allow us to make decisions with our code by only executing code under the `if` statement when the conditional argument is `True` or truthy.  We then saw how we can use the `else` statement to only run code when the conditional argument is `False` or falsy, and as we know, code that is not in a conditional block is still run as normal. Next, we examined what is truthy or falsy, and saw that None, 0, empty strings, and lists are all falsy. If we are unsure, we can use the `bool` function to see the boolean equivalent of a piece of data. Finally, we used `if`, `elif`, and `else` statements together to make decisions based on the conditions of our problem.
