@@ -130,7 +130,7 @@ else:
     vacation_days =  3
 
 
-It is important to note that an `else` block comes last and will **only** run if all the conditions before it are false.
+It is important to note that an `else` block comes last and will **only** run if all the conditions before it are false. 
 
 ## Truthiness
 
