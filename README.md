@@ -58,6 +58,8 @@ Code that is part of an `if` statement *block* runs only when the condition eval
 
 > **Note:** A *block* is any code that is grouped together. With conditionals, we indicate that something is part of the *block* by *indentation*. So the line `vacation_days += 1` is indented to ensure that it is run as a part of the conditional argument below. To end the block we simply stop indenting.
 
+> **Note:** In all the following code blocks pay close attention to how the variable `vacation_days` is affected depending on the value and order of the conditions. The idea is to understand how Python decides which code should run when it comes across an `if`, `elif`, and `else` statement. 
+
 
 ```python
 vacation_days = 1
