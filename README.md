@@ -7,8 +7,7 @@ We have talked about different data types, how to use them, and the kinds of ope
 
 ## Objectives
 You will be able to:
-* Understand and use conditionals
-* Write an If statement
+* Use Python conditional statements
 
 ## Execution Flow
 
@@ -50,15 +49,15 @@ print(vacation_days)
 On line 1 we assign `vacation_days` the value `0`. So, on line two, we reassign `vacation_days` to equal the current value of `vacation_days`, which is `0`, plus `1`. Again we increment vacation_days on line 3, which would now equate to `1 + 1`, and finally we output the new value of `vacation_days`, `2`.
 
 ## If Statement
-In Python there are three conditional statements, `if`, `elif`, and `else`. Every conditional statement is required to begin with an `if`. `elif` and `else` are not always required. `elif` is short for **else if**.
+In Python there are three conditional statements, `if`, `elif`, and `else`. Every conditional statement is required to begin with an `if`. The `elif` and `else` statements are not always required. `elif` is short for **else if**.
 
-Now what if we wanted to only increment our vacation days based on a condtion? We could imagine a condition in this context being whether or not we hit our goals this quarter at work. If that condition were `True` we would want to increase our vacation days. However, if that condition is not `True` we can't increase our vacation time. Let's look at the code below that contains an `if` statement. 
+Now what if we wanted to only increment our vacation days based on a condtion? We could imagine a condition in this context being whether or not we hit our goals this quarter at work. If that condition were `True`, we would want to increase our vacation days. However, if that condition is not `True`, we can't increase our vacation time. Let's look at the code below that contains an `if` statement. 
 
 Code that is part of an `if` statement *block* runs only when the condition evaluates to `True`. So if the condition evaluates to `False` our block of code will not be run and it moves on to the next block. 
 
 > **Note:** A *block* is any code that is grouped together. With conditionals, we indicate that something is part of the *block* by *indentation*. So the line `vacation_days += 1` is indented to ensure that it is run as a part of the conditional argument below. To end the block we simply stop indenting.
 
-> **Note:** In all the following code blocks pay close attention to how the variable `vacation_days` is affected depending on the value and order of the conditions. The idea is to understand how Python decides which code should run when it comes across an `if`, `elif`, and `else` statement. 
+> **Note:** In all of the following code blocks, pay close attention to how the variable `vacation_days` is affected depending on the value and order of the conditions. The idea is to understand how Python decides which code should run when it comes across an `if`, `elif`, and `else` statement. 
 
 
 ```python
