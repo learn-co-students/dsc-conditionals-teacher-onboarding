@@ -1,4 +1,3 @@
-
 # Control Flow: Conditionals
 
 ## Introduction
@@ -62,7 +61,8 @@ Code that is part of an `if` statement *block* runs only when the condition eval
 
 ```python
 vacation_days = 1
-if True:
+goals_met = True
+if goals_met:
     # all code indented under the if statement is the block
     # indented code runs since conditional argument is True
     vacation_days += 1
@@ -82,7 +82,8 @@ What if the first conditional was set to `False` but we wanted to make sure ther
 
 ```python
 vacation_days = 1
-if False:
+goals_met = False
+if goals_met:
     # if block starts    
     # code does not run since conditional argument is False
     vacation_days += 1
@@ -109,12 +110,14 @@ Let's take a look:
 
 ```python
 vacation_days = 1
-if False:
+goals_met = False
+goals_exceeded = True
+if goals_met:
     # code does not run since conditional argument is False
     vacation_days += 1
     print("vacation_days = ", vacation_days)
     print("we incremented vacation days")
-elif True:
+elif goals_exceeded:
     print("We are now in our elif statement!")
     print("This means that we exceeded our goals this quarter")
     print("We will increase our vacation days by two")
