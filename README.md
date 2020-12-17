@@ -138,7 +138,7 @@ It is important to note that an `else` block comes last and will **only** run if
 
 ## Truthiness
 
-![truthiness](images/truthiness.png)
+![truthiness](https://upload.wikimedia.org/wikipedia/en/8/85/Truthiness.png)
 
 So far our conditionals have depended on whether something evaluates exactly to `True` or `False`.  But conditionals don't force us to be so precise. Conditionals also consider some values `True` if they are `truthy` and `False` if they are `falsy`.  Take a look at the following:
 
